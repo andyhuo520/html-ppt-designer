@@ -30,7 +30,7 @@ playwright install chromium
 # Unsplash 配图（必需）
 export UNSPLASH_ACCESS_KEY="your-unsplash-access-key"
 
-# AI ���成插图（可选）
+# AI 使用Zenm成插图（可选）
 export ZENMUX_API_KEY="your-zenmux-api-key"
 
 # 视频导出 TTS（可选）
