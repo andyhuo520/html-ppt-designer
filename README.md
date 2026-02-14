@@ -168,7 +168,7 @@ html-ppt-designer/
 2. 注册账号并登录
 3. 在控制台获取 API Key
 4. 设置环境变量：`export ZENMUX_API_KEY="your-key"`
-
+   优惠注册：https://zenmux.ai/invite/FLF08R
 ## 📝 设计原则
 
 ### 反 AI 审美铁律
