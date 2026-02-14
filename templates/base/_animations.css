@@ -1,0 +1,338 @@
+/**
+ * 6 种翻页动画系统
+ * Fade / Slide / Cinematic / Cut / Flip / Zoom
+ *
+ * 使用方式：
+ * 1. 在 .slides-viewport 上添加 .transition-{style} 类
+ * 2. 在离开的 slide 上添加 .slide-leaving
+ * 3. 在进入的 slide 上添加 .slide-entering
+ */
+
+/* ============================================================================
+   通用动画基础
+   ============================================================================ */
+
+.slides-viewport {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: none;
+}
+
+.slide.slide-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ============================================================================
+   1. Fade - 淡入淡出
+   简洁优雅，适合商务演示
+   ============================================================================ */
+
+.transition-fade .slide-leaving {
+  animation: fadeOut 0.6s ease forwards;
+}
+
+.transition-fade .slide-entering {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* ============================================================================
+   2. Slide - 水平滑动
+   经典翻页效果，方向感强
+   ============================================================================ */
+
+.transition-slide .slide-leaving {
+  animation: slideOutLeft 0.5s ease forwards;
+}
+
+.transition-slide .slide-entering {
+  animation: slideInRight 0.5s ease forwards;
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* ============================================================================
+   3. Cinematic - 电影感
+   缩放+模糊+透明度，适合 TED 风格
+   ============================================================================ */
+
+.transition-cinematic .slide-leaving {
+  animation: cinematicOut 0.8s ease forwards;
+}
+
+.transition-cinematic .slide-entering {
+  animation: cinematicIn 0.8s ease forwards;
+}
+
+@keyframes cinematicOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+    visibility: visible;
+  }
+  to {
+    transform: scale(1.15);
+    opacity: 0;
+    filter: blur(8px);
+    visibility: hidden;
+  }
+}
+
+@keyframes cinematicIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+    filter: blur(8px);
+    visibility: hidden;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+    visibility: visible;
+  }
+}
+
+/* ============================================================================
+   4. Cut - 瞬间切换
+   无过渡，适合数据密集型演示
+   ============================================================================ */
+
+.transition-cut .slide-leaving {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: none !important;
+}
+
+.transition-cut .slide-entering {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: none !important;
+}
+
+/* ============================================================================
+   5. Flip - 3D 翻转
+   立体感强，适合创意演示
+   ============================================================================ */
+
+.transition-flip .slides-viewport {
+  perspective: 1200px;
+}
+
+.transition-flip .slide {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.transition-flip .slide-leaving {
+  animation: flipOut 0.6s ease forwards;
+}
+
+.transition-flip .slide-entering {
+  animation: flipIn 0.6s ease forwards;
+}
+
+@keyframes flipOut {
+  from {
+    transform: rotateY(0deg);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    transform: rotateY(-90deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes flipIn {
+  from {
+    transform: rotateY(90deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* ============================================================================
+   6. Zoom - 中心缩放聚焦
+   聚焦效果，适合重点内容强调
+   ============================================================================ */
+
+.transition-zoom .slide-leaving {
+  animation: zoomOut 0.5s ease forwards;
+}
+
+.transition-zoom .slide-entering {
+  animation: zoomIn 0.5s ease forwards;
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    transform: scale(0.3);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(2);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* ============================================================================
+   减少运动偏好支持
+   ============================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .slide-leaving,
+  .slide-entering {
+    animation: none !important;
+    transition: opacity 0.1s !important;
+  }
+
+  .transition-slide .slide-leaving,
+  .transition-slide .slide-entering,
+  .transition-cinematic .slide-leaving,
+  .transition-cinematic .slide-entering,
+  .transition-flip .slide-leaving,
+  .transition-flip .slide-entering,
+  .transition-zoom .slide-leaving,
+  .transition-zoom .slide-entering {
+    transform: none !important;
+    filter: none !important;
+  }
+}
+
+/* ============================================================================
+   元素入场动画（用于幻灯片内元素）
+   ============================================================================ */
+
+.animate-on-enter {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-active .animate-on-enter {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-active .delay-100 { transition-delay: 100ms; }
+.slide-active .delay-200 { transition-delay: 200ms; }
+.slide-active .delay-300 { transition-delay: 300ms; }
+.slide-active .delay-400 { transition-delay: 400ms; }
+.slide-active .delay-500 { transition-delay: 500ms; }
+
+/* 从左进入 */
+.animate-from-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-active .animate-from-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 从右进入 */
+.animate-from-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-active .animate-from-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 缩放进入 */
+.animate-scale {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-active .animate-scale {
+  opacity: 1;
+  transform: scale(1);
+}

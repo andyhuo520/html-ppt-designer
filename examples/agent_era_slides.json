@@ -1,0 +1,65 @@
+{
+  "title": "Agent 时代，最稀缺的是欲望",
+  "slides": [
+    {
+      "index": 0,
+      "type": "cover",
+      "title": "Agent 时代",
+      "content": "最稀缺的是欲望"
+    },
+    {
+      "index": 1,
+      "type": "content",
+      "title": "什么是 Agent",
+      "content": "Agent 是基于大模型的新一代应用形态。与传统的 SaaS 软件不同，Agent 不只是工具，而是能够理解意图、自主决策、执行任务的智能体。OpenAI 推出的 OpenClaw 正是这一变革的标志。"
+    },
+    {
+      "index": 2,
+      "type": "content",
+      "title": "劳动、工具与 Agent",
+      "content": "传统模式中，人类使用工具完成劳动。Agent 时代，工具开始替代人类的劳动。这不仅是效率的提升，更是人类角色的一次根本性转变——从执行者转向指挥者。"
+    },
+    {
+      "index": 3,
+      "type": "content",
+      "title": "SaaS 的范式转移",
+      "content": "传统 SaaS 是 2B（To Business）模式，服务企业用户。Agent 时代，SaaS 正在转向 2A（To Agent）模式。未来的软件不再直接服务于人，而是服务于 Agent，由 Agent 代人完成工作。"
+    },
+    {
+      "index": 4,
+      "type": "content",
+      "title": "公司组织的重构",
+      "content": "当 Agent 能够承担大部分执行工作时，传统的科层制公司组织面临解构。小团队甚至个人，配合多个专业 Agent，就能完成原本需要大型团队才能实现的任务。组织的边界正在重新定义。"
+    },
+    {
+      "index": 5,
+      "type": "content",
+      "title": "从 Worker 到 Partner",
+      "content": "人类与 Agent 的关系不是主仆，而是协作。人类的角色从 Worker（劳动者）转变为 Partner（合作伙伴）——提供方向、创意和价值观判断，而 Agent 负责具体执行和实现。"
+    },
+    {
+      "index": 6,
+      "type": "quote",
+      "title": "金句",
+      "content": "当工具变得足够聪明，人类面临的最大危机不是失业，而是自由的眩晕。"
+    },
+    {
+      "index": 7,
+      "type": "content",
+      "title": "三种人的状态",
+      "content": "在 Agent 时代，人类将呈现三种状态：少数人成为欲望的「设计者」，定义问题并指明方向；一部分人成为 Agent 的「协作者」，与智能体共同创造；多数人则可能沦为欲望的「消费者」，被动接受算法推荐的一切。"
+    },
+    {
+      "index": 8,
+      "type": "content",
+      "title": "最稀缺的是什么",
+      "content": "在能力不再稀缺的时代，真正稀缺的是欲望——是知道自己想要什么，是提出好问题的能力，是定义价值而非实现价值的能力。"
+    },
+    {
+      "index": 9,
+      "type": "ending",
+      "title": "谢谢",
+      "content": "在 Agent 时代，保持对世界的渴望"
+    }
+  ]
+}

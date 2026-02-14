@@ -1,0 +1,41 @@
+{
+  "title": "AI 配图测试演示",
+  "slides": [
+    {
+      "index": 0,
+      "type": "cover",
+      "title": "AI 配图功能演示",
+      "content": "展示如何使用 ZMark API 为 PPT 生成高质量配图"
+    },
+    {
+      "index": 1,
+      "type": "content",
+      "title": "数据驱动的洞察",
+      "content": "通过 AI 分析个人数据，发现隐藏在数字生活中的模式和趋势，让数据讲述你的故事。"
+    },
+    {
+      "index": 2,
+      "type": "quote",
+      "title": "金句",
+      "content": "数据不会说谎，但它需要 AI 来翻译。真正的价值不是数据本身，而是它揭示的故事。"
+    },
+    {
+      "index": 3,
+      "type": "content",
+      "title": "团队协作的力量",
+      "content": "在现代工作环境中，跨职能团队协作是成功的关键。通过有效的沟通和协作，我们可以实现更大的目标。"
+    },
+    {
+      "index": 4,
+      "type": "content",
+      "title": "创新与突破",
+      "content": "真正的创新来自于对问题的深入理解和不断尝试。每一次失败都是向成功迈进的一步。"
+    },
+    {
+      "index": 5,
+      "type": "ending",
+      "title": "谢谢",
+      "content": "让我们一起创造更好的未来"
+    }
+  ]
+}

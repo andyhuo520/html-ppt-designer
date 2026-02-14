@@ -1,0 +1,45 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Environment variables (API Keys)
+.env
+.env.local
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Output files
+*.html
+*.mp4
+*.mp3
+*.wav
+*.m4a
+output/
+ppt_images/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test files
+test_*.py
+*_test.py
