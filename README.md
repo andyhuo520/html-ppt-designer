@@ -82,6 +82,8 @@ python3 scripts/ppt_to_video.py presentation.html \
 
 ## 🎨 视觉风格
 
+> 📖 **查看完整风格指南**：[STYLES.md](STYLES.md) - 包含所有 17 种风格的详细 CSS 配置、设计特征和使用建议
+
 ### Classic/Professional 经典专业
 - **A1 TED 演讲** - 深色背景+大图 overlay，叙事演讲
 - **A2 Apple Keynote** - 极简白底+超大留白，产品发布
